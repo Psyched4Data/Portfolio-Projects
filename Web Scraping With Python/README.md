@@ -1,2 +1,2 @@
 # This project is a work in progress.
-The expected completion date is Late July.
+The expected completion date is Late Sep
