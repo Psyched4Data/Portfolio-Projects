@@ -1,1 +1,3 @@
-
+# What is the Google Advanced Data Analytics Project?
+As part of the Google Advanced Data Analytics Certificate offered on Coursera, students must complete a capstone project. There are multiple capstone projects that students can choose to complete. This particular project is a fictitious case study using a hypothetical TikToK assignment. In this project, the student takes the role of a TikTok data analyst and is put on a hypothetical team with the goal of creating a machine learning model capable of classifying claims made against videos uploaded onto the platform.
+*This is a fictional case study aimed at displaying my skills in a hypothetical working environment. I have not worked for nor am I affiliated with the TikTok company.*
