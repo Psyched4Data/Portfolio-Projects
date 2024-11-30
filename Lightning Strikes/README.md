@@ -1,1 +1,1 @@
-# Lightning Strke Tablue Visualizations from the Coursera Advanced Data Analyitics Certificate
+# Lightning Strke Tableau Visualizations from the Coursera Advanced Data Analytics Certificate.
