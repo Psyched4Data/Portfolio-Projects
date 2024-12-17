@@ -5,3 +5,5 @@ In the first course of the Certificate, I created a [Project Proposal](https://d
 PACE stands for Plan, Analyze, Create, and Execute. For more details on the PACE model, see the [Planning Document](https://docs.google.com/document/d/1X9ypk4f4lU6ee92UevrKcBM6mccnGf3ZlAuOeJYlnFU/edit?tab=t.0).
 
 I then created a [PACE Strategy Document for Phase 2](https://docs.google.com/document/d/1ZjLdQcsUV-_tvo2EnQoAqq44hAL1uiiRqwz04O-HJU4/edit?usp=sharing). From this document I planned how I would assess the data set provided to me. My mission was to identify trends during my Exploratory Data Analysis (EDA). You can refer to the Course 2 TikTok project lab.ipynb file to see the code used in that EDA. All of this analysis culminated in the Course-2-Executive-summaries.pdf where I shared my key findings and suggested next steps.
+
+For Phase 3 of this project, 
