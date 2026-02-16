@@ -1,0 +1,52 @@
+Ranks,Name,Industry,Revenue,Profit,Employees,Headquarters,State-owned
+1,Walmart,Retail,"$680,985","$19,436","2,100,000",United States,No
+2,Amazon,Retail Information technology,"$637,959","$59,248","1,556,000",United States,No
+3,State Grid Corporation of China,Electricity,"$545,948","$9,204","1,361,423",China,Yes
+4,Saudi Aramco,Oil and gas,"$480,446","$106,246","73,311",Saudi Arabia,Yes
+5,China National Petroleum Corporation,Oil and gas,"$476,000","$25,250","1,026,301",China,Yes
+6,China Petrochemical Corporation,Oil and gas,"$429,700","$9,393","513,434",China,Yes
+7,UnitedHealth Group,Healthcare,"$400,278","$14,405","400,000",United States,No
+8,Apple,Information technology,"$391,035","$93,736","164,000",United States,No
+9,Berkshire Hathaway,Financials,"$371,433","$88,995","392,400",United States,No
+10,CVS Health,Healthcare,"$357,776","$8,344","259,500",United States,No
+11,Alphabet,Information technology,"$350,018","$100,118","183,323",United States,No
+12,Volkswagen Group,Automotive,"$348,408","$17,945","684,025",Germany,No
+13,ExxonMobil,Oil and gas,"$344,582","$36,010","61,500",United States,No
+14,Vitol,Commodities,"$331,000","$13,000","1,560",Switzerland,No
+15,Shell,Oil and gas,"$323,183","$19,359","103,000",United Kingdom,No
+16,China State Construction Engineering,Construction,"$320,431","$4,272","382,894",China,Yes
+17,Toyota,Automotive,"$312,018","$34,214","380,793",Japan,No
+18,McKesson,Healthcare,"$308,951","$3,002","48,000",United States,No
+19,Microsoft,Information technology,"$281,700","$101,800","228,000",United States,No
+20,Cencora,Healthcare,"$262,173","$1,745","44,000",United States,No
+21,Trafigura,Commodities,"$244,280","$7,393","12,479",Singapore,No
+22,Costco,Retail,"$242,290","$6,292","316,000",United States,No
+23,JPMorgan Chase,Financials,"$239,425","$49,552","309,926",United States,No
+24,Industrial and Commercial Bank of China,Financials,"$222,484","$51,417","419,252",China,Yes
+25,TotalEnergies,Oil and gas,"$218,945","$21,384","102,579",France,No
+26,Glencore,Commodities,"$217,829","$4,280","83,426",Switzerland,No
+27,BP,Oil and gas,"$213,032","$15,239","79,400",United Kingdom,No
+28,Cardinal Health,Healthcare,"$205,012",$261,"47,520",United States,No
+29,Stellantis,Automotive,"$204,908","$20,103","258,275",Netherlands,No
+30,Chevron,Oil and gas,"$200,949","$21,369","45,600",United States,No
+31,China Construction Bank,Financials,"$199,826","$46,990","376,871",China,Yes
+32,Samsung Electronics,Electronics,"$198,257","$11,082","267,860",South Korea,No
+33,Foxconn,Electronics,"$197,876","$4,563","621,393",Taiwan,No
+34,Cigna,Healthcare,"$195,265","$5,164","71,413",United States,No
+35,Agricultural Bank of China,Financials,"$192,398","$38,049","451,003",China,Yes
+36,Schwarz Gruppe,Retail,"$180,576","$16,988","595,000",Germany,No
+37,China Railway Engineering Corporation,Construction,"$178,563","$2,152","314,149",China,Yes
+38,Cargill,Conglomerate,"$177,000","$17,641","160,000",United States,No
+39,Ford Motor Company,Automotive,"$176,191","$4,347","177,000",United States,No
+40,Bank of China,Financials,"$172,328","$32,758","306,931",China,Yes
+41,Bank of America,Financials,"$171,912","$26,515","212,985",United States,No
+42,General Motors,Automotive,"$171,842","$10,127","163,000",United States,No
+43,Elevance Health,Healthcare,"$171,340","$5,987","104,900",United States,No
+44,BMW Group,Automotive,"$168,103","$12,205","154,950",Germany,No
+45,Mercedes-Benz Group,Automotive,"$165,638","$15,417","166,056",Germany,No
+46,Meta Platforms,Social media,"$164,500","$62,360","78,450",United States,No
+47,China Railway Construction Corporation,Construction,"$160,847","$1,701","336,433",China,Yes
+48,Baowu,Steel,"$157,216","$2,494","258,697",China,Yes
+49,Citigroup,Financials,"$156,820","$9,228","237,925",United States,No
+50,Nvidia,Semiconductors,"$155,500","$31,910","36,000",United States,No
+51,Enel,Energy,"$147,100","$3,400","61,060",Italy,Yes
