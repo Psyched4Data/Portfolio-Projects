@@ -7,13 +7,13 @@ This project demonstrates end-to-end data collection, cleaning, storage, and vis
 I scraped book data from BooksToScrape.com, extracted structured information (title, price, and rating), stored the data in a CSV file, and performed exploratory analysis to uncover pricing patterns across star ratings.
 
 This project highlights skills in:
--Web scraping with requests and BeautifulSoup
--Data wrangling with pandas
--Data visualization with matplotlib
--Automation across multiple pages
--Converting unstructured HTML into structured datasets
+- Web scraping with requests and BeautifulSoup
+- Data wrangling with pandas
+- Data visualization with matplotlib
+- Automation across multiple pages
+- Converting unstructured HTML into structured datasets
 
-###Step 1 Pull the HTML
+### Step 1 Pull the HTML
 ```python
 import requests
 from bs4 import BeautifulSoup
@@ -24,24 +24,19 @@ response = response.content
 soup = BeautifulSoup(response, 'html.parser')
 soup
 ```
-####What I Did
+#### What I Did
+-Sent an HTTP request to the website using requests
+-Retrieved the raw HTML content
+-Parsed the HTML using BeautifulSoup
+-Converted the webpage into a searchable object (soup)
 
-Sent an HTTP request to the website using requests
-
-Retrieved the raw HTML content
-
-Parsed the HTML using BeautifulSoup
-
-Converted the webpage into a searchable object (soup)
-
-####Why This Matters
-
+#### Why This Matters
 Web pages are unstructured HTML.
 To extract meaningful data, we must first convert that HTML into a structured format that Python can navigate.
 
 This step establishes the foundation for automated scraping.
 
-###Step 2 Scrape the Key Data
+### Step 2 Scrape the Key Data
 ```python
 import requests
 from bs4 import BeautifulSoup
@@ -80,31 +75,31 @@ for i in range(1,51):
     
         books.append([title, price, stars])
 ```
-####What I Did
--Automated scraping across all 50 pages using a loop
--Located each book container using HTML tags
--Extracted:
-    Book title
-    Star rating (converted from text to numeric)
-    Price (cleaned and converted to float)
-    Stored results in a Python list
+#### What I Did
+- Automated scraping across all 50 pages using a loop
+- Located each book container using HTML tags
+- Extracted:
+    * Book title
+    * Star rating (converted from text to numeric)
+    * Price (cleaned and converted to float)
+    * Stored results in a Python list
 
-####Why This Matters
+#### Why This Matters
 This demonstrates:
--Web automation
--Data cleaning during extraction
--Transforming messy HTML attributes into usable structured data
+- Web automation
+- Data cleaning during extraction
+- Transforming messy HTML attributes into usable structured data
 
-###Step 3 Creating a Structured Dataset
-####What I did
--Converted the raw list into a structured pandas DataFrame
--Assigned meaningful column names
--Exported the dataset to CSV for future use
-####Why This Matters
--Raw scraped data is not useful until structured properly.
--This step transforms collected data into an analysis-ready dataset.
+### Step 3 Creating a Structured Dataset
+#### What I did
+- Converted the raw list into a structured pandas DataFrame
+- Assigned meaningful column names
+- Exported the dataset to CSV for future use
+#### Why This Matters
+- Raw scraped data is not useful until structured properly.
+- This step transforms collected data into an analysis-ready dataset.
 
-###Step 4 Make Visuals
+### Step 4 Make Visuals
 ```python
 import matplotlib.pyplot as plt
 
@@ -134,15 +129,15 @@ plt.grid(alpha=0.3)
 
 plt.show()
 ```
-####What I Did
--Grouped books by star rating
--Calculated average price for each rating
--Visualized the relationship using a line chart
--Added data labels for clarity
+#### What I Did
+- Grouped books by star rating
+- Calculated average price for each rating
+- Visualized the relationship using a line chart
+- Added data labels for clarity
 
-####Analytical Insight
+#### Analytical Insight
 Do higher-rated books cost more on average?
-!(Average Book Price by Star Rating.png)
+![Graph 1](Visuals/Average Book Price by Star Rating.png)
 
 Next Visual
 ```python
@@ -170,13 +165,15 @@ plt.grid(alpha=0.3)
 
 plt.show()
 ```
-####What I Did
+#### What I Did
 -Counted number of books per star rating
 -Visualized the frequency distribution
 -Added annotations for interpretability
 
-####Analytical Insight
+#### Analytical Insight
 -Are certain ratings more common than others?
+
+![Graph 2](Visuals/Count of Books by Rating.png)
 
 ## Scraping the largest companies from Wikipedia
 
