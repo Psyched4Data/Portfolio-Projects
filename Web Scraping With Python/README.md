@@ -173,7 +173,7 @@ plt.show()
 #### Analytical Insight
 -Are certain ratings more common than others?
 
-![Graph 2](Visuals/Count of Books by Rating.png)
+![Graph 2]([Visuals/Count of Books by Rating.png](https://github.com/Psyched4Data/Portfolio-Projects/blob/main/Web%20Scraping%20With%20Python/Visuals/Average%20Book%20Price%20by%20Star%20Rating.png))
 
 ## Scraping the largest companies from Wikipedia
 
