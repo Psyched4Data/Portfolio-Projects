@@ -331,4 +331,5 @@ sns.barplot(...)
 
 #### Analytical Insight
 Are certain ratings more common than others?
+
 <img src="Visuals/Revenue by Industry.png" width="600">
