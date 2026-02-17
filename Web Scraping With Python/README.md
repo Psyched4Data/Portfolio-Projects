@@ -137,7 +137,7 @@ plt.show()
 
 #### Analytical Insight
 Do higher-rated books cost more on average?
-![Graph 1](Visuals/Average Book Price by Star Rating.png)
+<img src="Visuals/Average Book Price by Star Rating.png" width="600">
 
 ### Next Visual
 ```python
@@ -166,14 +166,170 @@ plt.grid(alpha=0.3)
 plt.show()
 ```
 #### What I Did
--Counted number of books per star rating
--Visualized the frequency distribution
--Added annotations for interpretability
+- Counted number of books per star rating
+- Visualized the frequency distribution
+- Added annotations for interpretability
 
 #### Analytical Insight
--Are certain ratings more common than others?
-
-<img src="Visuals/Average Book Price by Star Rating.png" width="600">
+Are certain ratings more common than others?
+<img src="Visuals/Count of Books by Rating.png" width="600">
 
 ## Scraping the largest companies from Wikipedia
+This project demonstrates advanced web scraping, complex table parsing, data cleaning, and industry-level revenue analysis using Python.
+I scraped the Wikipedia page listing the largest companies by revenue and built a complete data pipeline to:
+- Extract structured company-level financial data
+- Handle complex HTML tables with rowspan
+- Clean and transform revenue values
+- Expand multi-industry classifications
+- Compute and visualize average revenue by industry
 
+This project highlights deeper scraping logic beyond simple tag extraction.
+
+### Step 1 Connecting to Wikipedia
+```python
+from bs4 import BeautifulSoup
+import requests
+import time
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+headers = {
+    'User-Agent': 'WikiScraper/1.0 (https://github.com/Psyched4Data/Portfolio-Projects/tree/main/Web%20Scraping%20With%20Python; haydongonzalezdyer@gmail.com)'
+}
+
+url = 'https://en.wikipedia.org/wiki/List_of_largest_companies_by_revenue'
+page = requests.get(url, headers=headers)
+soup = BeautifulSoup(page.text, 'html.parser')
+print(soup)
+```
+#### What I Did
+- Sent a request with a custom User-Agent header
+- Retrieved the HTML content
+- Parsed the webpage into a searchable object
+
+##### Why This Matters
+Using a custom header:
+- Demonstrates responsible scraping practices
+- Identifies the script to the server
+- Reduces the risk of being blocked
+
+### Step 2 Extracting Table Headers
+```python
+table = soup.find('table', class_='wikitable')
+header_row = table.find('tr')
+headers_list = [th.get_text(strip=True) for th in header_row.find_all('th')]
+headers_list = [h.split('[')[0] if '[' in h else h for h in headers_list]
+
+df = pd.DataFrame(columns=headers_list)
+```
+#### What I Did
+- Located the main revenue table
+- Extracted column headers dynamically
+- Removed reference footnotes (e.g., “[1]”)
+ -Created an empty structured DataFrame
+
+#### Why This Matters
+Wikipedia tables often include:
+- Footnote markers
+- Inconsistent formatting
+
+### Step 3 Handling Complex Tables with rowspan
+```python
+rows = table.find_all("tr")[1:]
+all_rows_data = []
+active_rowspans = {}
+
+for row in rows:
+    ...
+```
+#### What I Did
+
+Wikipedia’s table includes rowspan attributes, meaning:
+- Some cells span multiple rows instead of repeating their value.
+- To correctly extract the table:
+    * Tracked active rowspans in a dictionary
+    * Carried values forward when rows were merged
+    * Managed column alignment manually
+    * Added safety padding for missing cells
+
+#### Why This Matters
+- Most beginner scrapers fail when encountering rowspan.
+- This section demonstrates:
+    * Advanced HTML structure handling
+    * Defensive programming
+    * Data integrity validation
+
+### Step 4 Converting to a Clean Dataset
+```python
+df = pd.DataFrame(all_rows_data, columns=headers_list)
+df = df.drop(columns=["Ref."])
+df.to_csv("fortune_companies.csv", index=False, encoding="utf-8")
+```
+#### What I Did
+- Converted extracted rows into a structured DataFrame
+- Removed unnecessary reference columns
+- Exported the cleaned dataset to CSV
+
+#### Why This Matters
+- Unstructured HTML → Clean structured dataset
+
+### Step 5 Revenue Cleaning & Industry Analysis
+```python
+df["Revenue_clean"] = (
+    df["Revenue"]
+    .str.replace("$", "", regex=False)
+    .str.replace(",", "", regex=False)
+    .astype(float)
+)
+```
+#### What I Did
+- Removed currency symbols
+- Removed commas
+- Converted revenue to numeric format
+#### Why This Matters
+- Financial data must be numeric to:
+    * Aggregate
+    * Compare
+    * Visualize
+
+### Step 6 Handling Multi-Industry Companies
+```python
+def split_industries(industry_str):
+    if industry_str == "Retail Information technology":
+        return ["Retail", "Information technology"]
+    else:
+        return [industry_str]
+
+df["Industry_list"] = df["Industry"].apply(split_industries)
+df_exploded = df.explode("Industry_list")
+```
+#### What I Did
+- Identified companies classified under multiple industries
+- Split industry labels into lists
+- Used .explode() to allow companies to contribute to multiple industry averages
+
+#### Why This Matters
+- Without exploding:
+    * Multi-industry companies would distort results
+    * Revenue would only be counted once
+
+### Step 7 Visualizing Average Revenue by Industry
+```python
+industry_avg = (
+    df_exploded.groupby("Industry_list")["Revenue_clean"]
+    .mean()
+    .sort_values(ascending=False)
+)
+# Then visualize using Seaborn
+sns.barplot(...)
+```
+#### What I Did
+- Calculated mean revenue by industry
+- Sorted industries by average revenue
+- Created a formatted bar chart
+- Added value labels for clarity
+
+#### Analytical Insight
+Are certain ratings more common than others?
+<img src="Visuals/Revenue by Industry.png" width="600">
