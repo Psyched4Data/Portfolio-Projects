@@ -25,10 +25,10 @@ soup = BeautifulSoup(response, 'html.parser')
 soup
 ```
 #### What I Did
--Sent an HTTP request to the website using requests
--Retrieved the raw HTML content
--Parsed the HTML using BeautifulSoup
--Converted the webpage into a searchable object (soup)
+- Sent an HTTP request to the website using requests
+- Retrieved the raw HTML content
+- Parsed the HTML using BeautifulSoup
+- Converted the webpage into a searchable object (soup)
 
 #### Why This Matters
 Web pages are unstructured HTML.
@@ -139,7 +139,7 @@ plt.show()
 Do higher-rated books cost more on average?
 ![Graph 1](Visuals/Average Book Price by Star Rating.png)
 
-Next Visual
+### Next Visual
 ```python
 rating_counts = df["Star Rating"].value_counts().reindex([1,2,3,4,5])
 
