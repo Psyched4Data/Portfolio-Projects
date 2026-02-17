@@ -138,7 +138,7 @@ plt.show()
 #### Analytical Insight
 Do higher-rated books cost more on average?
 
-<img src="Visuals/Average Book Price by Star Rating.png" width="600">
+<img src="Visuals/Average Book Price by Star Rating.png" width="500">
 
 ### Next Visual
 ```python
@@ -174,7 +174,7 @@ plt.show()
 #### Analytical Insight
 Are certain ratings more common than others?
 
-<img src="Visuals/Count of Books by Rating.png" width="600">
+<img src="Visuals/Count of Books by Rating.png" width="500">
 
 ## Scraping the largest companies from Wikipedia
 This project demonstrates advanced web scraping, complex table parsing, data cleaning, and industry-level revenue analysis using Python.
