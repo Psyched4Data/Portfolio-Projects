@@ -244,7 +244,6 @@ for row in rows:
     ...
 ```
 #### What I Did
-
 Wikipedia’s table includes rowspan attributes, meaning:
 - Some cells span multiple rows instead of repeating their value.
 - To correctly extract the table:
