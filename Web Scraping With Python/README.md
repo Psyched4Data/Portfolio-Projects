@@ -137,6 +137,7 @@ plt.show()
 
 #### Analytical Insight
 Do higher-rated books cost more on average?
+
 <img src="Visuals/Average Book Price by Star Rating.png" width="600">
 
 ### Next Visual
@@ -172,6 +173,7 @@ plt.show()
 
 #### Analytical Insight
 Are certain ratings more common than others?
+
 <img src="Visuals/Count of Books by Rating.png" width="600">
 
 ## Scraping the largest companies from Wikipedia
