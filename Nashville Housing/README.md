@@ -173,4 +173,4 @@ Used ALTER TABLE DROP COLUMN.
 - ALTER TABLE operations
 - Column creation and removal
 
-<img src="Visuals/Housing BI Dashboard.pdf" width="500">
+<img src="Visuals/BI Dashboard.png" width="500">
