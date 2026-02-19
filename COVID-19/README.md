@@ -150,6 +150,8 @@ FROM PopvsVac;
 ### Why I Did It
 Allows analysis of vaccination progress over time alongside deaths and cases.
 
+<img src="Visuals/Dashboard.png" width="500">
+
 ## Skills Demonstrated
 - SQL Data Cleaning (dates, missing values)
 - Aggregation & Percent Calculations
